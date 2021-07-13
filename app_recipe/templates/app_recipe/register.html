@@ -1,0 +1,40 @@
+{% extends 'app_recipe/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="background-col">
+	<div class="row">
+		<div class="col-sm">
+			<div class="col-sm">
+			</div>
+		</div>
+		<div class="col-sm">
+			<div class="background1">
+				<div class="container">
+					<div class="main">
+						<form class="box" method="POST"  >
+							{% csrf_token %}
+							<h1>Register</h1>
+							<p class="text-muted"> Please enter details for signup!</p>
+							{{ form1|crispy }}
+							{{ form2|crispy }}
+							<input class="login" type="submit" name="" value="Register" href="#">
+							<input class="login" type="submit" name="" value="Already have account?" href="#" >
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+			</div>
+		</div>
+		<div class="col-sm">
+			<div class="col-sm">
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
